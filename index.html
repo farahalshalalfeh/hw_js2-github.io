@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    var arr=[]
+    var Add=()=>{
+      arr.push(document.getElementById('n').value)
+      document.getElementById('n').value=' '
+    }
+    var Display=()=>{
+      for(var x=0;x<arr.length;x++){
+        // document.write
+       document.getElementById('result').innerHTML +=
+        ("<br> Element "+ parseInt(x+1) +" = " +arr[x] )
+      }
+      
+    }
+  </script>
+</head>
+<body>
+  <input type="number" id="n">
+  <button onclick="Add()">Add</button>
+  <button onclick="Display()">Display</button>
+  <p id="result"></p>
+
+</body>
+</html>
